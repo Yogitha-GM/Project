@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCORDION</title>
+    <link rel="stylesheet" href="./style5.css">
+    <!-- <script src="./style5.js"></script> -->
+</head>
+<body>
+   
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>HTML is a hypertext markup language it is used to creating a web page 
+            It consists of series of elements
+            HTML elements tell the browser how to display the content
+        </p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>CSS is a cascading stylesheet It describes how html elements are to be displayed on screen,paper
+            css saves lot of work.
+        </p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Javascript is the world most popular programing language.It is the programming
+            language of web.
+        </p>
+    </div>
+
+<!--------------------------------------------------JS--------------------------------------->
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+var i;
+for(i = 0;i < acc.length;i++) {
+    acc[i].addEventListener("click",function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if(panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+    </script>
+</body>
+</html>
